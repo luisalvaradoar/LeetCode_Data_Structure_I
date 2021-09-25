@@ -1,0 +1,9 @@
+class Solution:
+    def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        conjunto1 = set(nums1)
+        conjunto2 = set(nums2)
+        salida = []
+        for interseccion in conjunto1 & conjunto2:
+            for i in range(min(nums1.count(interseccion),nums2.count(interseccion))):
+                salida.append(interseccion)
+        return salida
