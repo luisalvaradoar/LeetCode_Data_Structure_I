@@ -1,6 +1,0 @@
-class Solution:
-    def canConstruct(self, ransomNote: str, magazine: str) -> bool:
-        for letra in ransomNote:
-            if ransomNote.count(letra) > magazine.count(letra):
-                return(False)
-        return(True)
